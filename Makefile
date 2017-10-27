@@ -3,7 +3,7 @@ SHELL=/bin/bash
 build:
 	docker build -t mermade/openapi-gui .
 
-start:
+start: build
 	docker run --name openapi-gui -p 8080:3000 -d mermade/openapi-gui
 
 stop:

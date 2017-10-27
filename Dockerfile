@@ -1,9 +1,10 @@
-FROM node:boron-alpine
+FROM node:8-alpine
 
 WORKDIR /usr/src/app
 
 # install dependencies
 COPY package.json .
+
 RUN npm install
 
 # install the app
