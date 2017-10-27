@@ -1,4 +1,4 @@
-#!_usr/bin/env node
+#!/usr/bin/env node
 
 'use strict';
 
@@ -12,6 +12,7 @@ const shins = require('shins');
 const ourVersion = require('./package.json').version;
 var definition = {openapi:"3.0.0",info:{title:"API",version:"1.0.0"}};
 
+// nice stack traces
 process.on('unhandledRejection', r => console.log(r));
 
 var api = require('openapi-webconverter/api.js').api;
